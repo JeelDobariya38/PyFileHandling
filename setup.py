@@ -9,7 +9,7 @@ setup(
     author='JeelDobariya',
     author_email='dobariyaj34@gmail.com',
     url='https://github.com/JeelDobariya38/pyfilehandling',
-    packages=['src.pyfilehandling'],
+    packages=['pyfilehandling'],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'License :: OSI Approved :: MIT License',
