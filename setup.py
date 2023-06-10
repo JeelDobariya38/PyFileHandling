@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='pyfilehandling',
-    version='1.1',
+    version='1.1.1',
     description='A Python package for file manipulation operations.',
     long_description='pyfilehandling is a Python package that provides functions and classes for handling file operations, including creating files and directories, reading and writing data, and more.',
     long_description_content_type='text/markdown',
