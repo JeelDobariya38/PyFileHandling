@@ -1,6 +1,12 @@
 # PyFileHandling
 pyfilehandling is a python package. Which help user in handling there file and give necessary function to user for some file manipulation operation.
 
+# CONTRIBUTION
+contribution are welcome in pyfilehandling project for getting start please read the [CONTRIBUTING.md](CONTRIBUTING.md)
+
+# Code of Conduct
+here is code of conduct for the repository [code_of_conduct](CODE_OF_CONDUCT.md)
+
 ## For installation
 
 ```python
