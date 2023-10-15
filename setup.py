@@ -1,10 +1,17 @@
 from setuptools import setup
 
+def read_file(file_name):
+    with open(file_name, 'r', encoding='utf-8') as file:
+        return file.read()
+
+# Use the README.md file as the long description
+long_description = read_file('README.md')
+
 setup(
     name='pyfilehandling',
-    version='1.1.1',
+    version='2.0.0',
     description='A Python package for file manipulation operations.',
-    long_description='pyfilehandling is a Python package that provides functions and classes for handling file operations, including creating files and directories, reading and writing data, and more.',
+    long_description=long_description,
     long_description_content_type='text/markdown',
     author='JeelDobariya',
     author_email='dobariyaj34@gmail.com',
@@ -18,7 +25,7 @@ setup(
         'Programming Language :: Python :: 3.11',
         'Programming Language :: Python :: 3.12',
     ],
-    keywords='file handling manipulation',
+    keywords=['file handling','file manipulation','file operation']
     project_urls={
         'Bug Tracker': 'https://github.com/JeelDobariya38/pyfilehandling/issues',
         'Documentation': 'https://jeeldobariya38.github.io/pyfilehandling/',
