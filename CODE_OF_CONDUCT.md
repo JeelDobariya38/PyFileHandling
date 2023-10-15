@@ -2,7 +2,7 @@
 
 ## Introduction
 
-As contributors and maintainers of the `pyfilehandling` repository, it is important for us to foster an open and inclusive community. We are dedicated to providing a harassment-free experience for everyone, regardless of gender, sexual orientation, disability, ethnicity, religion, or any other personal characteristic. We expect all contributors and users to adhere to this Code of Conduct when participating in any activities related to the repository.
+As contributors and maintainers of the `PyFileHandling` repository, it is important for us to foster an open and inclusive community. We are dedicated to providing a harassment-free experience for everyone, regardless of gender, sexual orientation, disability, ethnicity, religion, or any other personal characteristic. We expect all contributors and users to adhere to this Code of Conduct when participating in any activities related to the repository.
 
 ## Expected Behavior
 
