@@ -1,1 +1,1 @@
-from pyfilehandling.FileIO import create,write,read
+from .fileio import create, write, read

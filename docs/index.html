@@ -1,71 +1,42 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
     <meta charset="utf-8">
-
     <meta name="viewport" content="width=device-width">
-
-    <title>pyfilehandling Documation</title>
-
-    <link href="prism.css" rel="stylesheet" type="text/css" />
-
+    <title>PyFileHandling Documation</title>
+    <link href="prism/prism.css" rel="stylesheet" type="text/css" />
     <meta name="keywords" content="pyfilehandling, Filehandling in python, file, python, pyfile">
-
 </head>
 
 <body>
-
     <h2>For installation</h2>
-
-    <pre class="language-py"><code>pip install pyfilehandling</code></pre>
+    <pre class="lang-bash"><code>pip install pyfilehandling</code></pre>
 
     <h2>Import a package</h2>
-
-    <pre class="language-py"><code>import pyfilehandling.FileIO</code></pre>
-
-    <pre class="language-py"><code>import pyfilehandling.FileIO as file</code></pre>
-
-    <pre class="language-py"><code>from pyfilehandling import FileIO</code></pre>
-
-    
+    <pre class="lang-py"><code>import pyfilehandling.FileIO</code></pre>
+    <pre class="lang-py"><code>import pyfilehandling.FileIO as file</code></pre>
+    <pre class="lang-py"><code>from pyfilehandling import FileIO</code></pre>
 
     <h2>Create a file</h2>
-
-    <pre class="language-py"><code>import pyfilehandling.FileIO as file
-
+    <pre class="lang-py"><code>import pyfilehandling.FileIO as file
 file.create('abc.txt')</code></pre>
 
     <h2>Write in a file</h2>
-
-    <pre class="language-py"><code>import pyfilehandling.FileIO as file
-
+    <pre class="lang-py"><code>import pyfilehandling.FileIO as file
 file.write('abc.txt','abcdef')</code></pre>
 
     <h2>Read Data from a file</h2>
-
-    <pre class="language-py"><code>import pyfilehandling.FileIO as file
-
+    <pre class="lang-py"><code>import pyfilehandling.FileIO as file
 file.read('abc.txt')</code></pre>
 
     <h2>Appending into a file</h2>
-
-    <pre class="language-py"><code>import pyfilehandling.FileIO as file
-
+    <pre class="lang-py"><code>import pyfilehandling.FileIO as file
 file.write('abc.txt','abcdef',"a")</code></pre>
 
     <h2>Create a Directory</h2>
-
-    <pre class="language-py"><code>import pyfilehandling.FileIO as file
-
+    <pre class="lang-py"><code>import pyfilehandling.FileIO as file
 file.create_directory('PyFile')</code></pre>
 
-    
-
-    <script src="prism.js"></script>
-
+    <script src="prism/prism.js"></script>
 </body>
-
 </html>
