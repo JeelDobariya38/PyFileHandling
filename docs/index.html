@@ -5,37 +5,34 @@
     <meta name="viewport" content="width=device-width">
     <title>PyFileHandling Documation</title>
     <link href="prism/prism.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/trimmer.js"></script>
     <meta name="keywords" content="pyfilehandling, Filehandling in python, file, python, pyfile">
 </head>
 
 <body>
-    <h2>For installation</h2>
-    <pre class="lang-bash"><code>pip install pyfilehandling</code></pre>
+    <header>
+        <h1>PyFileHandling Documation</h1>
+    </header>
 
-    <h2>Import a package</h2>
-    <pre class="lang-py"><code>import pyfilehandling.FileIO</code></pre>
-    <pre class="lang-py"><code>import pyfilehandling.FileIO as file</code></pre>
-    <pre class="lang-py"><code>from pyfilehandling import FileIO</code></pre>
-
-    <h2>Create a file</h2>
-    <pre class="lang-py"><code>import pyfilehandling.FileIO as file
-file.create('abc.txt')</code></pre>
-
-    <h2>Write in a file</h2>
-    <pre class="lang-py"><code>import pyfilehandling.FileIO as file
-file.write('abc.txt','abcdef')</code></pre>
-
-    <h2>Read Data from a file</h2>
-    <pre class="lang-py"><code>import pyfilehandling.FileIO as file
-file.read('abc.txt')</code></pre>
-
-    <h2>Appending into a file</h2>
-    <pre class="lang-py"><code>import pyfilehandling.FileIO as file
-file.write('abc.txt','abcdef',"a")</code></pre>
-
-    <h2>Create a Directory</h2>
-    <pre class="lang-py"><code>import pyfilehandling.FileIO as file
-file.create_directory('PyFile')</code></pre>
+    <section>
+        <h2>For installation</h2>
+        <pre class="lang-bash"><code>pip install pyfilehandling</code></pre>
+    </section>
+    
+    <section>
+        <h2>Import a package</h2>
+        <pre class="lang-py"><code class="trim-code">
+            import pyfilehandling
+        </code></pre>
+    </section>
+    
+    <section>
+        <h2>Create a file</h2>
+        <pre class="lang-py"><code class="trim-code">
+            import pyfilehandling
+            pyfilehandling.create('abc.txt')
+        </code></pre>
+    </section>
 
     <script src="prism/prism.js"></script>
 </body>
