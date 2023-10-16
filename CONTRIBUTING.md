@@ -1,6 +1,6 @@
-# Contributing to pyfilehandling
+# Contributing to PyFileHandling
 
-Thank you for considering contributing to the `pyfilehandling` repository! Your contribution is greatly appreciated. This guide will help you understand the process of contributing and how you can get involved.
+Thank you for considering contributing to the `PyFileHandling` repository! Your contribution is greatly appreciated. This guide will help you understand the process of contributing and how you can get involved.
 
 ## Table of Contents
 
@@ -26,21 +26,21 @@ Thank you for considering contributing to the `pyfilehandling` repository! Your 
 
 ### Prerequisites
 
-To contribute to `pyfilehandling`, you will need:
+To contribute to `PyFileHandling`, you will need:
 
-- Python (version 3.10.X)
+- Python (version 3.12.X)
 
 - Any additional dependencies specified in the project's requirements.txt or setup.py file
 
 ### Setting up the Development Environment
 
-1. Fork the `pyfilehandling` repository to your GitHub account.
+1. Fork the `PyFileHandling` repository to your GitHub account.
 
 2. Clone your forked repository to your local machine:
 
    ```shell
 
-   git clone https://github.com/your-username/pyfilehandling.git
+   git clone https://github.com/your-username/PyFileHandling.git
 
    ```
 
@@ -48,7 +48,7 @@ To contribute to `pyfilehandling`, you will need:
 
    ```shell
 
-   cd pyfilehandling
+   cd PyFileHandling
 
    ```
 
@@ -68,7 +68,7 @@ To contribute to `pyfilehandling`, you will need:
 
 If you encounter a bug, have a feature request, or want to suggest an improvement, please consider creating an issue. This allows the project maintainers and community to discuss and address the topic. To create an issue, follow these steps:
 
-1. Go to the [pyfilehandling repository](https://github.com/JeelDobariya38/pyfilehandling).
+1. Go to the [PyFileHandling repository](https://github.com/JeelDobariya38/PyFileHandling).
 
 2. Click on the "Issues" tab.
 
@@ -80,7 +80,7 @@ If you encounter a bug, have a feature request, or want to suggest an improvemen
 
 ### Creating a Pull Request
 
-If you would like to contribute code to `pyfilehandling`, you can do so by creating a pull request. This allows your changes to be reviewed and merged into the main repository. To create a pull request, follow these steps:
+If you would like to contribute code to `PyFileHandling`, you can do so by creating a pull request. This allows your changes to be reviewed and merged into the main repository. To create a pull request, follow these steps:
 
 1. Commit your changes to a new branch:
 
@@ -100,7 +100,7 @@ If you would like to contribute code to `pyfilehandling`, you can do so by creat
 
    ```
 
-3. Go to the [pyfilehandling repository](https://github.com/your-username/pyfilehandling).
+3. Go to the [PyFileHandling Repository](https://github.com/your-username/PyFileHandling).
 
 4. Click on the "Pull Requests" tab.
 
@@ -114,7 +114,7 @@ If you would like to contribute code to `pyfilehandling`, you can do so by creat
 
 ## Style Guidelines
 
-To maintain a consistent codebase, we follow a set of style guidelines. Please adhere to the following guidelines when contributing to `pyfilehandling`:
+To maintain a consistent codebase, we follow a set of style guidelines. Please adhere to the following guidelines when contributing to `PyFileHandling`:
 
 - Use [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide for Python code.
 
@@ -128,4 +128,4 @@ We expect all contributors to follow our [Code of Conduct](CODE_OF_CONDUCT.md). 
 
 ## License
 
-By contributing to `pyfilehandling`, you agree that your contributions will be licensed under the [MIT License](LICENSE). Make sure you understand and agree with this before submitting your contributions.
+By contributing to `PyFileHandling`, you agree that your contributions will be licensed under the [MIT License](LICENSE). Make sure you understand and agree with this before submitting your contributions.
