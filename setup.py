@@ -15,7 +15,7 @@ setup(
     long_description_content_type='text/markdown',
     author='JeelDobariya',
     author_email='dobariyaj34@gmail.com',
-    url='https://github.com/JeelDobariya38/pyfilehandling',
+    url='https://github.com/JeelDobariya38/PyFileHandling',
     packages=['pyfilehandling'],
     classifiers=[
         'Development Status :: 3 - Alpha',
@@ -27,9 +27,9 @@ setup(
     ],
     keywords=['file handling','file manipulation','file operation'],
     project_urls={
-        'Bug Tracker': 'https://github.com/JeelDobariya38/pyfilehandling/issues',
-        'Documentation': 'https://jeeldobariya38.github.io/pyfilehandling/',
-        'Source Code': 'https://github.com/JeelDobariya38/pyfilehandling',
+        'Bug Tracker': 'https://github.com/JeelDobariya38/PyFileHandling/issues',
+        'Documentation': 'https://jeeldobariya38.github.io/PyFileHandling/',
+        'Source Code': 'https://github.com/JeelDobariya38/PyFileHandling',
     },
     license='MIT',
     package_data={

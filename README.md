@@ -1,5 +1,5 @@
 # PyFileHandling
-[![Run-Tests](https://github.com/JeelDobariya38/pyfilehandling/actions/workflows/Run-Tests.yaml/badge.svg)](https://github.com/JeelDobariya38/pyfilehandling/actions/workflows/Run-Tests.yaml)
+[![Run-Tests](https://github.com/JeelDobariya38/PyFileHandling/actions/workflows/Run-Tests.yaml/badge.svg)](https://github.com/JeelDobariya38/PyFileHandling/actions/workflows/Run-Tests.yaml)
 
 ## Overview
 PyFileHandling is a Python package that provides file handling capabilities and offers various functions for file manipulation operations.
