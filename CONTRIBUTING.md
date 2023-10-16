@@ -2,26 +2,6 @@
 
 Thank you for considering contributing to the `PyFileHandling` repository! Your contribution is greatly appreciated. This guide will help you understand the process of contributing and how you can get involved.
 
-## Table of Contents
-
-- [Getting Started](#getting-started)
-
-  - [Prerequisites](#prerequisites)
-
-  - [Setting up the Development Environment](#setting-up-the-development-environment)
-
-- [Contributing](#contributing)
-
-  - [Creating an Issue](#creating-an-issue)
-
-  - [Creating a Pull Request](#creating-a-pull-request)
-
-- [Style Guidelines](#style-guidelines)
-
-- [Code of Conduct](#code-of-conduct)
-
-- [License](#license)
-
 ## Getting Started
 
 ### Prerequisites
@@ -29,7 +9,6 @@ Thank you for considering contributing to the `PyFileHandling` repository! Your 
 To contribute to `PyFileHandling`, you will need:
 
 - Python (version 3.12.X)
-
 - Any additional dependencies specified in the project's requirements.txt or setup.py file
 
 ### Setting up the Development Environment
@@ -37,27 +16,18 @@ To contribute to `PyFileHandling`, you will need:
 1. Fork the `PyFileHandling` repository to your GitHub account.
 
 2. Clone your forked repository to your local machine:
-
    ```shell
-
    git clone https://github.com/your-username/PyFileHandling.git
-
    ```
 
 3. Navigate to the project directory:
-
    ```shell
-
    cd PyFileHandling
-
    ```
 
 4. Install the required dependencies:
-
    ```shell
-
    pip install -r requirements.txt
-
    ```
 
 5. You're ready to make changes!
@@ -85,32 +55,25 @@ If you would like to contribute code to `PyFileHandling`, you can do so by creat
 1. Commit your changes to a new branch:
 
    ```shell
-
    git checkout -b my-new-branch
-
    git commit -am "Add new feature or fix bug"
-
    ```
 
 2. Push the branch to your forked repository:
 
    ```shell
-
    git push origin my-new-branch
-
    ```
 
-3. Go to the [PyFileHandling Repository](https://github.com/your-username/PyFileHandling).
+3. Go to the your forked repository on github.
 
-4. Click on the "Pull Requests" tab.
+4. Click on the "Contribute" button.
 
-5. Click on the "New Pull Request" button.
+5. Open a new pull request from forked repository to master/main repository
 
-6. Select your branch from the dropdown menu.
+6. Provide a descriptive title and a detailed description of your changes.
 
-7. Provide a descriptive title and a detailed description of your changes.
-
-8. Click on "Create pull request".
+7. Click on "Create pull request".
 
 ## Style Guidelines
 
@@ -128,4 +91,4 @@ We expect all contributors to follow our [Code of Conduct](CODE_OF_CONDUCT.md). 
 
 ## License
 
-By contributing to `PyFileHandling`, you agree that your contributions will be licensed under the [MIT License](LICENSE). Make sure you understand and agree with this before submitting your contributions.
+By contributing to `PyFileHandling`, you agree that your contributions will be licensed under the [MIT License](LICENSE.txt). Make sure you understand and agree with this before submitting your contributions.

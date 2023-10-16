@@ -25,11 +25,15 @@ setup(
         'Programming Language :: Python :: 3.11',
         'Programming Language :: Python :: 3.12',
     ],
-    keywords=['file handling','file manipulation','file operation']
+    keywords=['file handling','file manipulation','file operation'],
     project_urls={
         'Bug Tracker': 'https://github.com/JeelDobariya38/pyfilehandling/issues',
         'Documentation': 'https://jeeldobariya38.github.io/pyfilehandling/',
         'Source Code': 'https://github.com/JeelDobariya38/pyfilehandling',
     },
     license='MIT',
+    package_data={
+        'your_package': ['*.pyi'],
+    },
+    python_requires='>=3.9',
 )
