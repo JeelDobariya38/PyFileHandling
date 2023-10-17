@@ -36,23 +36,23 @@ def test_moked_file_handle_write_and_read(mock_file_handle):
 
 # test code for `with .. as ..` block
 
-def test_mock_file_handle_write(mock_file_handle):
+def test_mock_file_handle_write_with(mock_file_handle):
     with mock_file_handle as file_handle:
         file_handle.write("Hello, World!")
     assert mock_file_handle.data == "Hello, World!"
 
-def test_mock_file_handle_writelines(mock_file_handle):
+def test_mock_file_handle_writelines_with(mock_file_handle):
     lines = ["Line 1", "Line 2", "Line 3"]
     with mock_file_handle as file_handle:
         file_handle.writelines(lines)
     assert mock_file_handle.data == "Line 1\nLine 2\nLine 3"
 
-def test_mock_file_handle_read(mock_file_handle):
+def test_mock_file_handle_read_with(mock_file_handle):
     mock_file_handle.data = "Testing Read Functionality"
     with mock_file_handle as file_handle:
         assert file_handle.read() == "Testing Read Functionality"
 
-def test_mock_file_handle_readline(mock_file_handle):
+def test_mock_file_handle_readline_with(mock_file_handle):
     mock_file_handle.data = "Line 1\nLine 2\nLine 3"
     with mock_file_handle as file_handle:
         assert file_handle.readline() == "Line 1\n"
@@ -60,7 +60,7 @@ def test_mock_file_handle_readline(mock_file_handle):
         assert file_handle.readline() == "Line 3\n"
         assert file_handle.readline() is None
 
-def test_mock_file_handle_readlines(mock_file_handle):
+def test_mock_file_handle_readlines_with(mock_file_handle):
     mock_file_handle.data = "Line 1\nLine 2\nLine 3"
     with mock_file_handle as file_handle:
         assert file_handle.readlines() == ["Line 1\n", "Line 2\n", "Line 3\n"]
