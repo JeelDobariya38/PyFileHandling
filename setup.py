@@ -4,7 +4,6 @@ def read_file(file_name):
     with open(file_name, 'r', encoding='utf-8') as file:
         return file.read()
 
-# Use the README.md file as the long description
 long_description = read_file('README.md')
 
 setup(
