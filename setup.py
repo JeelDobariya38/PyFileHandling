@@ -31,8 +31,5 @@ setup(
         'Source Code': 'https://github.com/JeelDobariya38/PyFileHandling',
     },
     license='MIT',
-    package_data={
-        'pyfilehandling': ['*.pyi'],
-    },
     python_requires='>=3.9',
 )
