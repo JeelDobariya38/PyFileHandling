@@ -8,7 +8,7 @@ long_description = read_file('README.md')
 
 setup(
     name='pyfilehandling',
-    version='2.0.0',
+    version='2.0.1',
     description='A Python package for file manipulation operations.',
     long_description=long_description,
     long_description_content_type='text/markdown',
