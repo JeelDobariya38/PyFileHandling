@@ -8,7 +8,7 @@ long_description = read_file('README.md')
 
 setup(
     name='pyfilehandling',
-    version='2.0.1',
+    version='2.0.2',
     description='A Python package for file manipulation operations.',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -29,6 +29,9 @@ setup(
         'Bug Tracker': 'https://github.com/JeelDobariya38/PyFileHandling/issues',
         'Documentation': 'https://jeeldobariya38.github.io/PyFileHandling/',
         'Source Code': 'https://github.com/JeelDobariya38/PyFileHandling',
+    },
+    package_data={
+        'pyfilehandling': ['py.typed', '*.pyi'],
     },
     license='MIT',
     python_requires='>=3.9',
