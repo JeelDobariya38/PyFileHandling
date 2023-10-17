@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <title>PyFileHandling Documation</title>
     <link href="prism/prism.css" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/style.css" rel="stylesheet" type="text/css" />
     <script src="scripts/trimmer.js"></script>
     <meta name="keywords" content="pyfilehandling, Filehandling in python, file, python, pyfile">
 </head>
@@ -13,31 +14,32 @@
     <header>
         <h1>PyFileHandling Documation</h1>
     </header>
-
-    <section>
-        <h2>For installation</h2>
-        <pre class="lang-bash"><code>pip install pyfilehandling</code></pre>
-    </section>
-    
-    <section>
-        <h2>Import a package</h2>
-        <pre class="lang-py"><code class="trim-code">
-            import pyfilehandling
-        </code></pre>
-    </section>
-    
-    <section>
-        <h2>Example</h2>
-        <pre class="lang-py"><code class="trim-code">
-            import pyfilehandling
-            pyfilehandling.write("abc.txt","firstline\nsecondline")
-        </code></pre>
-        As result `abc.txt` will create in directory where this script is run from:
-        <pre class="lang-txt"><code class="trim-code">
-            firstline
-            secondline
-        </code></pre>
-    </section>
+    <main>
+        <section>
+            <h2>For installation</h2>
+            <pre class="lang-bash"><code>pip install pyfilehandling</code></pre>
+        </section>
+        
+        <section>
+            <h2>Import a package</h2>
+            <pre class="lang-py"><code class="trim-code">
+                import pyfilehandling
+            </code></pre>
+        </section>
+        
+        <section>
+            <h2>Example</h2>
+            <pre class="lang-py"><code class="trim-code">
+                import pyfilehandling
+                pyfilehandling.write("abc.txt","firstline\nsecondline")
+            </code></pre>
+            As result `abc.txt` will create in directory where this script is run from:
+            <pre class="lang-txt"><code class="trim-code">
+                firstline
+                secondline
+            </code></pre>
+        </section>
+    </main>
 
     <script src="prism/prism.js"></script>
 </body>

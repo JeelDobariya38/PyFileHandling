@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>PyFileHandling Documation | pyfilehandling</title>
+    <link href="prism/prism.css" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/style.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/trimmer.js"></script>
+    <meta name="keywords" content="pyfilehandling, Filehandling in python, file, python, pyfile">
+</head>
+
+<body>
+    <header>
+        <h1>PyFileHandling Documation</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>For installation</h2>
+            <pre class="lang-bash"><code>pip install pyfilehandling</code></pre>
+        </section>
+        
+        <section>
+            <h2>Import a package</h2>
+            <pre class="lang-py"><code class="trim-code">
+                import pyfilehandling
+            </code></pre>
+        </section>
+        
+        <section>
+            <h2>Writing to a File</h2>
+            <pre class="lang-py"><code class="trim-code">
+                def write(path: str, data: str, mode: Optional[str]) -> None:
+                """
+                Write data to a file.
+
+                Parameters:
+                - path (str): The path to the file.
+                - data (str): The data to be written to the file.
+                - mode (str, optional): The mode in which the file is opened. 
+                Defaults to 'a' (append). Other valid modes are 'w' (write).
+
+                Raises:
+                - ValueError: If an invalid mode is provided.
+
+                Returns:
+                - None
+                """
+            </code></pre>
+            <h3>Example:</h3>
+            <pre class="lang-py"><code class="trim-code">
+                import pyfilehandling
+                pyfilehandling.write("abc.txt","firstline\nsecondline")
+            </code></pre>
+            <b>As result `abc.txt` will create in directory where this script is run from:</b>
+            <pre class="lang-txt"><code class="trim-code">
+                content: firstline
+                secondline
+            </code></pre>
+        </section>
+
+        <section>
+            <h2>Reading from a File</h2>
+            <pre class="lang-py"><code class="trim-code">
+                def read(path: str) -> None:
+                """
+                Read data from a file.
+
+                Parameters:
+                - path (str): The path to the file.
+
+                Returns:
+                - str: The content of the file.
+
+                If the file is not found, an empty string is returned.
+                """
+            </code></pre>
+            <h3>Example:</h3>
+            <pre class="lang-py"><code class="trim-code">
+                import pyfilehandling
+                content = pyfilehandling.read("abc.txt")
+                print("content: " + content)
+
+                
+                """abc.txt
+                Hello, World!
+                """
+            </code></pre>
+            <b>output:</b>
+            <pre class="lang-txt"><code class="trim-code">
+                content: Hello, World!
+            </code></pre>
+        </section>
+    </main>
+
+    <script src="prism/prism.js"></script>
+</body>
+</html>
