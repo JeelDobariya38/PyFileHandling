@@ -27,10 +27,15 @@
     </section>
     
     <section>
-        <h2>Create a file</h2>
+        <h2>Example</h2>
         <pre class="lang-py"><code class="trim-code">
             import pyfilehandling
-            pyfilehandling.create('abc.txt')
+            pyfilehandling.write("abc.txt","firstline\nsecondline")
+        </code></pre>
+        As result `abc.txt` will create in directory where this script is run from:
+        <pre class="lang-txt"><code class="trim-code">
+            firstline
+            secondline
         </code></pre>
     </section>
 
