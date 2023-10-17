@@ -77,13 +77,35 @@ If you would like to contribute code to `PyFileHandling`, you can do so by creat
 
 ## Style Guidelines
 
-To maintain a consistent codebase, we follow a set of style guidelines. Please adhere to the following guidelines when contributing to `PyFileHandling`:
+### Coding Style
 
-- Use [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide for Python code.
+We follow a customized coding style for the `PyFileHandling` project, which is a blend of our own conventions and some elements from the [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide. The goal is to maintain a codebase that is not only functional but also readable and consistent.
 
-- Write clear and concise comments to explain your code.
+### Key Points:
 
-- Use meaningful variable and function names.
+1. **Consistency is Key:**
+   - While we're not strictly adhering to PEP 8, it's important to maintain consistency in coding style across the project.
+   - Consistent styling enhances code readability and makes collaboration smoother.
+
+2. **Clear and Concise Comments:**
+   - Write comments that explain the purpose of your code. Consider them as notes for your future self and other contributors.
+   - Aim for clarity and conciseness in your comments.
+
+3. **Meaningful Naming:**
+   - Use descriptive variable and function names. A well-named variable is often better than a comment explaining its purpose.
+   - Meaningful names contribute to the project's maintainability.
+
+### Contribution Guidelines:
+
+1. **Pull Requests:**
+   - When submitting pull requests, ensure that your code aligns with the established coding style.
+   - Mention any deliberate deviations from the style and provide reasons for the changes.
+
+2. **Code Review:**
+   - Code reviews will consider both functionality and adherence to the coding style.
+   - Be open to feedback and discussions about coding style during the review process.
+
+By following these style guidelines, we aim to create a codebase that is not only functional but also accessible and enjoyable for everyone involved.
 
 ## Code of Conduct
 
