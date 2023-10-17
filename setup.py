@@ -30,6 +30,9 @@ setup(
         'Documentation': 'https://jeeldobariya38.github.io/PyFileHandling/',
         'Source Code': 'https://github.com/JeelDobariya38/PyFileHandling',
     },
+    package_data={
+        'pyfilehandling': ['py.typed', '*.pyi'],
+    },
     license='MIT',
     python_requires='>=3.9',
 )
