@@ -32,7 +32,7 @@ setup(
     },
     license='MIT',
     package_data={
-        'your_package': ['*.pyi'],
+        'pyfilehandling': ['*.pyi'],
     },
     python_requires='>=3.9',
 )
