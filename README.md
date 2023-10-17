@@ -19,3 +19,7 @@ Contributions are welcome! To contribute to PyFileHandling, please read the [Con
 ## Code of Conduct
 
 We strive to maintain a positive and inclusive community. We encourage everyone participating in PyFileHandling to read the [Code of Conduct](CODE_OF_CONDUCT.md).
+
+## License
+
+By contributing to `PyFileHandling`, you agree that your contributions will be licensed under the [MIT License](LICENSE.txt). Make sure you understand and agree with this before submitting your contributions.
