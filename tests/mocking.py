@@ -5,6 +5,9 @@ class MockFileHandle:
         self.data = ""
         self.__read_index = 0
     
+    def close(self):
+        return None
+
     def __enter__(self):
         return self
 
