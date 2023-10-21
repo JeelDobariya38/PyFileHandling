@@ -1,10 +1,12 @@
 import os
 
+
 def create_dir(path):
     try:
         os.makedirs(path, exist_ok=True)
     except FileNotFoundError as e:
         raise ValueError(f"Invalid path '{path}': {e}")
+
 
 def remove_dir(path):
     try:
@@ -13,6 +15,7 @@ def remove_dir(path):
         pass  # Directory doesn't exist, nothing to remove
     except OSError as e:
         raise ValueError(f"Invalid path '{path}': {e}")
+
 
 def create_file(path):
     try:
@@ -23,6 +26,7 @@ def create_file(path):
     except FileNotFoundError as e:
         raise ValueError(f"Invalid path '{path}': {e}")
 
+
 def remove_file(path):
     try:
         os.remove(path)
@@ -31,11 +35,13 @@ def remove_file(path):
     except OSError as e:
         raise ValueError(f"Invalid path '{path}': {e}")
 
+
 def write(path, data, mode="a"):
     if mode not in ["w", "a"]:
         raise ValueError(f"Invalid mode '{mode}'. it should be 'w' or 'a'.")
     with open(path, mode) as f:
         f.write(data)
+
 
 def writeline(path, data, mode="a"):
     if mode not in ["w", "a"]:
@@ -43,12 +49,14 @@ def writeline(path, data, mode="a"):
     with open(path, mode) as f:
         f.write(data + '\n')
 
+
 def writelines(path, data_list, mode="a"):
     if mode not in ["w", "a"]:
         raise ValueError(f"Invalid mode '{mode}'. it should be 'w' or 'a'.")
     with open(path, mode) as f:
         for item in data_list:
             f.write(item + '\n')
+
 
 def read(path):
     try:
@@ -58,6 +66,7 @@ def read(path):
         return ""
     except OSError as e:
         raise ValueError(f"Error reading from '{path}': {e}")
+
 
 def readline(path, lineno):
     try:
@@ -69,6 +78,7 @@ def readline(path, lineno):
     except OSError as e:
         raise ValueError(f"Error reading from '{path}': {e}")
 
+
 def readlines(path):
     try:
         with open(path, "r") as f:
@@ -77,6 +87,7 @@ def readlines(path):
         return []
     except OSError as e:
         raise ValueError(f"Error reading from '{path}': {e}")
+
 
 def get_reader(path):
     try:
