@@ -176,4 +176,3 @@ def get_reader(path: str) -> Generator[str, None, None]:
     - FileNotFoundError: If the file does not exist.
     - ValueError: If an OS error occurs during the reading process, it is raised with a specific error message.
     """
-
