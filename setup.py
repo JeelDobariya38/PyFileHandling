@@ -8,7 +8,7 @@ long_description = read_file('README.md')
 
 setup(
     name='pyfilehandling',
-    version='2.0.2',
+    version='3.1.0-alpha',
     description='A Python package for file manipulation operations.',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -39,6 +39,7 @@ setup(
         'pyfilehandling': ['py.typed', '*.pyi'],
     },
     license='MIT',
+    license_file='LICENSE.txt',
     python_requires='>=3.9',
     install_requires=[
         # Add any required dependencies here
