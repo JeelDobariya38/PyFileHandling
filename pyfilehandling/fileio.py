@@ -62,7 +62,7 @@ def read(path):
 def readline(path, lineno):
     try:
         with open(path, "r") as f:
-            lines = [line.rstrip('\n') for line in f]
+            lines = [line.rstrip('\n') for line in f.readlines()]
             return lines[lineno]
     except FileNotFoundError:
         return ""
@@ -72,7 +72,7 @@ def readline(path, lineno):
 def readlines(path):
     try:
         with open(path, "r") as f:
-            return [line.rstrip('\n') for line in f]
+            return [line.rstrip('\n') for line in f.readlines()]
     except FileNotFoundError:
         return []
     except OSError as e:
