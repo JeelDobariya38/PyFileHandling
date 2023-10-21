@@ -35,8 +35,9 @@ jobs:
     # Additional step to install dependencies for coverage
     - name: Install additional dependencies for coverage
       run: |
-        pip install pytest pytest-cov
+        pip install pytest coverage
 
     - name: Run pytest with coverage
       run: |
-        python -m pytest -cov=pydevtools
+        coverage run -m pytest
+        coverage report -m
