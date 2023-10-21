@@ -59,12 +59,13 @@ def read(path):
     except OSError as e:
         raise ValueError(f"Error reading from '{path}': {e}")
 
-def readline(path):
+def readline(path, lineno):
     try:
         with open(path, "r") as f:
-            return [line.rstrip('\n') for line in f]
+            lines = [line.rstrip('\n') for line in f]
+            return lines[lineno]
     except FileNotFoundError:
-        return []
+        return ""
     except OSError as e:
         raise ValueError(f"Error reading from '{path}': {e}")
 

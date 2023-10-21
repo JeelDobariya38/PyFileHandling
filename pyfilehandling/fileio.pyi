@@ -109,41 +109,55 @@ def writelines(path: str, data_list: List[str], mode: Optional[str] = 'a') -> No
 
 def read(path: str) -> str:
     """
-    Read data from a file.
+    Read the content of a file.
 
     Parameters:
-    - path (str): The path to the file.
+    - path (str): The path to the file to read.
 
     Returns:
     - str: The content of the file.
 
     If the file is not found, an empty string is returned.
+
+    Raises:
+    - FileNotFoundError: If the file does not exist.
+    - ValueError: If an OS error occurs during the reading process, it is raised with a specific error message.
     """
 
-def readline(path: str) -> List[str]:
+def readline(path: str, lineno: int) -> str:
     """
-    Read lines from a file.
+    Read a specific line from a file.
 
     Parameters:
     - path (str): The path to the file.
+    - lineno (int): The line number to read (0-based index).
 
     Returns:
-    - List[str]: A list of lines from the file with newline characters removed.
+    - str: The content of the specified line.
 
-    If the file is not found, an empty list is returned.
+    If the file is not found, an empty string is returned.
+
+    Raises:
+    - FileNotFoundError: If the file does not exist.
+    - ValueError: If an OS error occurs during the reading process, it is raised with a specific error message.
+    - IndexError: If the specified line number is out of range.
     """
 
 def readlines(path: str) -> List[str]:
     """
-    Read lines from a file.
+    Read all lines from a file as a list.
 
     Parameters:
     - path (str): The path to the file.
 
     Returns:
-    - List[str]: A list of lines from the file with newline characters removed.
+    - List[str]: A list of lines from the file.
 
     If the file is not found, an empty list is returned.
+
+    Raises:
+    - FileNotFoundError: If the file does not exist.
+    - ValueError: If an OS error occurs during the reading process, it is raised with a specific error message.
     """
 
 def get_reader(path: str) -> Generator[str, None, None]:
@@ -154,7 +168,12 @@ def get_reader(path: str) -> Generator[str, None, None]:
     - path (str): The path to the file.
 
     Yields:
-    - str: Lines from the file with newline characters removed.
+    - str: Lines from the file, one at a time.
 
     If the file is not found, the generator is empty.
+
+    Raises:
+    - FileNotFoundError: If the file does not exist.
+    - ValueError: If an OS error occurs during the reading process, it is raised with a specific error message.
     """
+
