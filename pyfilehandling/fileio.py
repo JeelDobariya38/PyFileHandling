@@ -36,6 +36,18 @@ def remove_file(path: str) -> None:
         raise ValueError(f"Invalid path '{path}': {e}")
 
 
+def file_exist(path: str) -> bool:
+    if os.path.exists(path):
+        return os.path.isfile(path)
+    return False
+
+
+def dir_exist(path: str) -> bool:
+    if os.path.exists(path):
+        return os.path.isdir(path)
+    return False
+
+
 def write(path: str, data: str, mode: Optional[str] = 'a') -> None:
     if mode not in ["w", "a"]:
         raise ValueError(f"Invalid mode '{mode}'. it should be 'w' or 'a'.")
