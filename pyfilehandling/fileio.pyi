@@ -78,14 +78,14 @@ def dir_exist(path: str) -> bool:
     bool: True if the dir exists, and the path is valid. False if the dir does not exist or the path is broken.
     """
 
-def write(path: str, data: str, mode: Optional[str] = 'a') -> None:
+def write(path: str, data: str, mode: Optional[str] = "a") -> None:
     """
     Write data to a file.
 
     Parameters:
     - path (str): The path to the file.
     - data (str): The data to be written to the file.
-    - mode (str, optional): The mode in which the file is opened. 
+    - mode (str, optional): The mode in which the file is opened.
       Defaults to 'a' (append). Other valid modes are 'w' (write).
 
     Raises:
@@ -95,14 +95,14 @@ def write(path: str, data: str, mode: Optional[str] = 'a') -> None:
     - None
     """
 
-def writeline(path: str, data: str, mode: Optional[str] = 'a') -> None:
+def writeline(path: str, data: str, mode: Optional[str] = "a") -> None:
     """
     Write data to a file on a new line.
 
     Parameters:
     - path (str): The path to the file.
     - data (str): The data to be written to the file.
-    - mode (str, optional): The mode in which the file is opened. 
+    - mode (str, optional): The mode in which the file is opened.
       Defaults to 'a' (append). Other valid modes are 'w' (write).
 
     Raises:
@@ -112,14 +112,14 @@ def writeline(path: str, data: str, mode: Optional[str] = 'a') -> None:
     - None
     """
 
-def writelines(path: str, data_list: List[str], mode: Optional[str] = 'a') -> None:
+def writelines(path: str, data_list: List[str], mode: Optional[str] = "a") -> None:
     """
     Write a list of data to a file with each item on a new line.
 
     Parameters:
     - path (str): The path to the file.
     - data_list (List[str]): The list of data to be written to the file.
-    - mode (str, optional): The mode in which the file is opened. 
+    - mode (str, optional): The mode in which the file is opened.
       Defaults to 'a' (append). Other valid modes are 'w' (write).
 
     Raises:
