@@ -63,7 +63,7 @@ def writeline(path: str, data: str, mode: Optional[str] = "a") -> None:
         f.write(data + "\n")
 
 
-def writelines(path: str, data_list: List[str], 
+def writelines(path: str, data_list: List[str],
                mode: Optional[str] = "a") -> None:
     if mode not in ["w", "a"]:
         raise ValueError(f"Invalid mode '{mode}'. it should be 'w' or 'a'.")
