@@ -83,9 +83,16 @@ jobs:
         pip install poetry
         poetry install --no-root
 
+    - name: Update Poetry
+      run: |
+        pip install --upgrade poetry
+      
+    - name: Debugging Output
+      run: |
+        cat pyproject.toml
+
     - name: Build distribution and publish to PyPI
       env:
         POETRY_PYPI_TOKEN: ${{ secrets.POETRY_PYPI_TOKEN }}
       run: |
-        poetry build
         poetry publish --build
