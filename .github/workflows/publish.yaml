@@ -108,7 +108,7 @@ jobs:
         POETRY_PYPI_USERNAME: ${{ secrets.POETRY_PYPI_USERNAME }}
         POETRY_PYPI_TOKEN: ${{ secrets.POETRY_PYPI_TOKEN }}
       run: |
-        poetry publish --build --username $POETRY_PYPI_USERNAME --password $POETRY_PYPI_TOKEN
+        poetry publish --build --dry-run --username $POETRY_PYPI_USERNAME --password $POETRY_PYPI_TOKEN
 
     - name: Save as Artifact
       uses: actions/upload-artifact@v3
