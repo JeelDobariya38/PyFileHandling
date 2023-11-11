@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  lint:
+  Lint:
     runs-on: ubuntu-latest
 
     strategy:
@@ -26,15 +26,15 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    # Additional step to install linting dependencies
     - name: Install linting dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install flake8
-      
+        pip install poetry
+        poetry install --only lint
+    
     - name: Run flake8
       run: |
-        flake8 pyfilehandling
+       poetry run flake8 pyfilehandling
 
   Pytests:
     runs-on: ${{ matrix.os }}
@@ -54,18 +54,13 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    # Assuming you have a requirements.txt file
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
-
-    # Additional step to install dependencies for coverage
-    - name: Install additional dependencies for coverage
-      run: |
-        pip install pytest coverage
+        pip install poetry
+        poetry install
 
     - name: Run pytest with coverage
       run: |
-        coverage run -m pytest
-        coverage report --fail-under=50
+        poetry run coverage run -m pytest
+        poetry run coverage report --fail-under=50

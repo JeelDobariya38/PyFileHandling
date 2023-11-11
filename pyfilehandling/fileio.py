@@ -20,7 +20,7 @@ def remove_dir(path: str) -> None:
 
 def create_file(path: str) -> None:
     try:
-        with open(path, 'x'):
+        with open(path, "x"):
             pass
     except FileExistsError:
         pass  # File already exists, nothing to create
@@ -49,27 +49,27 @@ def dir_exist(path: str) -> bool:
     return False
 
 
-def write(path: str, data: str, mode: Optional[str] = 'a') -> None:
+def write(path: str, data: str, mode: Optional[str] = "a") -> None:
     if mode not in ["w", "a"]:
         raise ValueError(f"Invalid mode '{mode}'. it should be 'w' or 'a'.")
     with open(path, mode) as f:
         f.write(data)
 
 
-def writeline(path: str, data: str, mode: Optional[str] = 'a') -> None:
+def writeline(path: str, data: str, mode: Optional[str] = "a") -> None:
     if mode not in ["w", "a"]:
         raise ValueError(f"Invalid mode '{mode}'. it should be 'w' or 'a'.")
     with open(path, mode) as f:
-        f.write(data + '\n')
+        f.write(data + "\n")
 
 
-def writelines(path: str, data_list: List[str], mode: Optional[str] = 'a') \
-                -> None:
+def writelines(path: str, data_list: List[str],
+               mode: Optional[str] = "a") -> None:
     if mode not in ["w", "a"]:
         raise ValueError(f"Invalid mode '{mode}'. it should be 'w' or 'a'.")
     with open(path, mode) as f:
         for item in data_list:
-            f.write(item + '\n')
+            f.write(item + "\n")
 
 
 def read(path: str) -> str:
@@ -85,7 +85,7 @@ def read(path: str) -> str:
 def readline(path: str, lineno: int) -> str:
     try:
         with open(path, "r") as f:
-            lines = [line.rstrip('\n') for line in f.readlines()]
+            lines = [line.rstrip("\n") for line in f.readlines()]
             return lines[lineno]
     except FileNotFoundError:
         return ""
@@ -96,7 +96,7 @@ def readline(path: str, lineno: int) -> str:
 def readlines(path: str) -> List[str]:
     try:
         with open(path, "r") as f:
-            return [line.rstrip('\n') for line in f.readlines()]
+            return [line.rstrip("\n") for line in f.readlines()]
     except FileNotFoundError:
         return []
     except OSError as e:
@@ -107,7 +107,7 @@ def get_reader(path: str) -> Generator[str, None, None]:
     try:
         with open(path, "r") as f:
             for line in f:
-                yield line.rstrip('\n')
+                yield line.rstrip("\n")
     except FileNotFoundError:
         return
     except OSError as e:
