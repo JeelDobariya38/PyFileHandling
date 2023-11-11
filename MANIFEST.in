@@ -1,3 +1,0 @@
-include pyfilehandling/py.typed
-include pyfilehandling/*.pyi
-include pyfilehandling/files/*.pyi
