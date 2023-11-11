@@ -124,4 +124,4 @@ jobs:
         upload_url: ${{ github.event.release.upload_url }}
         asset_path: ./dist/
         asset_name: pyfilehandling
-        asset_content_type: application/octet-stream
+        asset_content_type: application/gzip
