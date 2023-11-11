@@ -56,6 +56,28 @@ def remove_file(path: str) -> None:
     - None
     """
 
+def file_exist(path: str) -> bool:
+    """
+    Check if a file exists at the specified path or if the path is broken.
+
+    Parameters:
+    path (str): The path to the file you want to check.
+
+    Returns:
+    bool: True if the file exists, and the path is valid. False if the file does not exist or the path is broken.
+    """
+
+def dir_exist(path: str) -> bool:
+    """
+    Check if a dir exists at the specified path or if the path is broken.
+
+    Parameters:
+    path (str): The path to the dir you want to check.
+
+    Returns:
+    bool: True if the dir exists, and the path is valid. False if the dir does not exist or the path is broken.
+    """
+
 def write(path: str, data: str, mode: Optional[str] = 'a') -> None:
     """
     Write data to a file.

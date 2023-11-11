@@ -27,7 +27,7 @@ Here's a quick start with some common use cases:
 import pyfilehandling
 
 # Create a directory
-pyfilehandling.create_dir("my_directory")
+pyfilehandling.fileio.create_dir("my_directory")
 
 # Write data to a file
 pyfilehandling.write("my_file.txt", "Hello, PyFileHandling!")
