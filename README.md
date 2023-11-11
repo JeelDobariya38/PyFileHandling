@@ -1,5 +1,5 @@
 # PyFileHandling - Streamlining Pythonic File Operations
-[![Run-Tests](https://github.com/JeelDobariya38/PyFileHandling/actions/workflows/Run-Tests.yaml/badge.svg)](https://github.com/JeelDobariya38/PyFileHandling/actions/workflows/Run-Tests.yaml)
+[![Run-Tests](https://github.com/JeelDobariya38/PyFileHandling/actions/workflows/Run-Tests.yaml/badge.svg)](https://github.com/JeelDobariya38/PyFileHandling/actions/workflows/Run-Tests.yaml) [![Publish Package To PyPi](https://github.com/JeelDobariya38/PyFileHandling/actions/workflows/publish.yaml/badge.svg?branch=main)](https://github.com/JeelDobariya38/PyFileHandling/actions/workflows/publish.yaml)
 
 ## Overview
 PyFileHandling is a Python package designed to simplify file handling operations. Whether you need to create, modify, or read files, this package offers an array of convenient functions to streamline your file manipulation tasks.
