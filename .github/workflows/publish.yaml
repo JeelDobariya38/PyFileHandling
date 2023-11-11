@@ -11,12 +11,10 @@ jobs:
     steps:
       - name: Check release type
         run: |
-          if [ "${{ github.event.action }}" == "published" ]; then
-            echo "This is a stable release."
-          elif [ "${{ github.event.action }}" == "prereleased" ]; then
-            echo "This is a prerelease."
+          if [ "${{ github.event.release.prerelease }}" == false ]; then
+            echo "Stable release."
           else
-            echo "Unexpected release action."
+            echo "Prerelease release"
           fi
   
   Lint:
