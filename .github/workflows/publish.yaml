@@ -1,4 +1,4 @@
-name: Publish Package
+name: Publish Package To PyPi
 
 on:
   release:
@@ -109,3 +109,9 @@ jobs:
         POETRY_PYPI_TOKEN: ${{ secrets.POETRY_PYPI_TOKEN }}
       run: |
         poetry publish --build --username $POETRY_PYPI_USERNAME --password $POETRY_PYPI_TOKEN
+
+    - name: Save as Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: python-package-artifact
+        path: ./dist/
