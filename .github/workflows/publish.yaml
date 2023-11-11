@@ -12,9 +12,9 @@ jobs:
       - name: Check release type
         run: |
           if [ "${{ github.event.release.prerelease }}" == "false" ]; then
-            echo "Stable release."
+            echo "Stable Release."
           else
-            echo "Prerelease release"
+            echo "Prerelease Release"
           fi
   
   Lint:
