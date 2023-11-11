@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Check release type
         run: |
-          if [ "${{ github.event.release.prerelease }}" == false ]; then
+          if [ "${{ github.event.release.prerelease }}" == "false" ]; then
             echo "Stable release."
           else
             echo "Prerelease release"
