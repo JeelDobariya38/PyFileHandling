@@ -2,9 +2,21 @@ name: Publish Package
 
 on:
   release:
-    types: [created, prereleased]
+    types: [published]
 
 jobs:
+  Release-nature:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check release type
+        run: |
+          if [ "${{ github.event_name }}" == "release" ]; then
+            echo "This is a stable release."
+          elif [ "${{ github.event_name }}" == "prerelease" ]; then
+            echo "This is a prerelease."
+          fi
+  
   Lint:
     runs-on: ubuntu-latest
 
@@ -15,10 +27,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
 
@@ -45,10 +57,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
 
@@ -70,12 +82,12 @@ jobs:
     
     steps:
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: 3.12
 
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Install dependencies
       run: |
@@ -93,6 +105,7 @@ jobs:
 
     - name: Build distribution and publish to PyPI
       env:
+        POETRY_PYPI_USERNAME: ${{ secrets.POETRY_PYPI_USERNAME }}
         POETRY_PYPI_TOKEN: ${{ secrets.POETRY_PYPI_TOKEN }}
       run: |
-        poetry publish --build
+        poetry publish --build --username $POETRY_PYPI_USERNAME --password $POETRY_PYPI_TOKEN
