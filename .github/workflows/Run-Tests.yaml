@@ -34,7 +34,7 @@ jobs:
     
     - name: Run flake8
       run: |
-      poetry run flake8 pyfilehandling
+       poetry run flake8 pyfilehandling
 
   Pytests:
     runs-on: ${{ matrix.os }}
