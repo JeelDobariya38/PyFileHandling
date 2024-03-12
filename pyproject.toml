@@ -33,11 +33,11 @@ packages = [
 python = "^3.9"
 
 [tool.poetry.group.test.dependencies]
-pytest = "^7.4.3"
+pytest = ">=7.4.3,<9.0.0"
 coverage = "^7.3.2"
 
 [tool.poetry.group.lint.dependencies]
-flake8 = "^6.1.0"
+flake8 = ">=6.1,<8.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
