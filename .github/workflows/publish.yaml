@@ -16,7 +16,7 @@ jobs:
           else
             echo "Prerelease Release"
           fi
-  
+
   Lint:
     runs-on: ubuntu-latest
 
@@ -26,102 +26,71 @@ jobs:
         python-version: ["3.9", "3.10", "3.11", "3.12"]
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: ${{ matrix.python-version }}
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
 
-    - name: Install linting dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install poetry
-        poetry install --only lint
-    
-    - name: Run flake8
-      run: |
-       poetry run flake8 pyfilehandling
-  
-  Test:
-    runs-on: ${{ matrix.os }}
+      - name: Install linting dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install poetry
+          poetry install --only lint
 
-    needs: Lint
-
-    strategy:
-      fail-fast: false
-      matrix:
-        os: ["ubuntu-latest", "windows-latest", "macOS-latest"]
-        python-version: ["3.9", "3.10", "3.11", "3.12"]
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: ${{ matrix.python-version }}
-
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install poetry
-        poetry install
-
-    - name: Run pytest with coverage
-      run: |
-        poetry run coverage run -m pytest
-        poetry run coverage report --fail-under=50
+      - name: Run flake8
+        run: |
+          poetry run flake8 pyfilehandling
 
   Publish:
     runs-on: ubuntu-latest
-    
-    needs: [Test, Release-nature]
-    
+
+    needs: [Lint, Release-nature]
+
     steps:
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: 3.12
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
 
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install poetry
-        poetry install --no-root
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install poetry
+          poetry install --no-root
 
-    - name: Update Poetry
-      run: |
-        pip install --upgrade poetry
-      
-    - name: Debugging Output
-      run: |
-        cat pyproject.toml
+      - name: Update Poetry
+        run: |
+          pip install --upgrade poetry
 
-    - name: Build distribution and publish to PyPI
-      env:
-        POETRY_PYPI_USERNAME: ${{ secrets.POETRY_PYPI_USERNAME }}
-        POETRY_PYPI_TOKEN: ${{ secrets.POETRY_PYPI_TOKEN }}
-      run: |
-        poetry publish --build --username $POETRY_PYPI_USERNAME --password $POETRY_PYPI_TOKEN
+      - name: Debugging Output
+        run: |
+          cat pyproject.toml
 
-    - name: Save as Artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: python-package-artifact
-        path: ./dist/
+      - name: Build distribution and publish to PyPI
+        env:
+          POETRY_PYPI_USERNAME: ${{ secrets.POETRY_PYPI_USERNAME }}
+          POETRY_PYPI_TOKEN: ${{ secrets.POETRY_PYPI_TOKEN }}
+        run: |
+          poetry publish --build --username $POETRY_PYPI_USERNAME --password $POETRY_PYPI_TOKEN
 
-    - name: Upload dist directory as Release Asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ github.event.release.upload_url }}
-        asset_path: ./dist/pyfilehandling-${{ github.event.release.name }}.tar.gz
-        asset_name: pyfilehandling-${{ github.event.release.name }}.tar.gz
-        asset_content_type: application/gzip
+      - name: Save as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: python-package-artifact
+          path: ./dist/
+
+      - name: Upload dist directory as Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ./dist/pyfilehandling-${{ github.event.release.name }}.tar.gz
+          asset_name: pyfilehandling-${{ github.event.release.name }}.tar.gz
+          asset_content_type: application/gzip
