@@ -9,6 +9,12 @@ class jsonFile:
             filename += ".json"
         self.file = open(filename, mode)
 
+    def __enter__(self):
+        return self.file
+
+    def __exit__(self, exc_type, exc_value, exc_traceback):
+        self.close()
+
     def read(self) -> Dict:
         if self.file.readable:
             return json.load(self.file)
@@ -24,3 +30,6 @@ class jsonFile:
             self.data = self.read()
         else:
             return self.data[key]
+
+    def close(self):
+        self.file.close()
