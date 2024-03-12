@@ -33,7 +33,7 @@ packages = [
 python = "^3.9"
 
 [tool.poetry.group.test.dependencies]
-pytest = "^7.4.3"
+pytest = ">=7.4.3,<9.0.0"
 coverage = "^7.3.2"
 
 [tool.poetry.group.lint.dependencies]
