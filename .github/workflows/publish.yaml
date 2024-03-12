@@ -78,19 +78,3 @@ jobs:
           POETRY_PYPI_TOKEN: ${{ secrets.POETRY_PYPI_TOKEN }}
         run: |
           poetry publish --build --username $POETRY_PYPI_USERNAME --password $POETRY_PYPI_TOKEN
-
-      - name: Save as Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: python-package-artifact
-          path: ./dist/
-
-      - name: Upload dist directory as Release Asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ./dist/pyfilehandling-${{ github.event.release.name }}.tar.gz
-          asset_name: pyfilehandling-${{ github.event.release.name }}.tar.gz
-          asset_content_type: application/gzip

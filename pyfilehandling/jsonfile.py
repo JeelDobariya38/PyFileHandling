@@ -24,7 +24,8 @@ class jsonFile:
     def write(self, data: Dict, indent: int = 4):
         if self.file.writable:
             json.dump(data, self.file, indent)
-        raise WriteNotPermitted(self.file.name)
+        else:
+            raise WriteNotPermitted(self.file.name)
 
     def read_key(self, key: str) -> Any:
         if self.data is None:
